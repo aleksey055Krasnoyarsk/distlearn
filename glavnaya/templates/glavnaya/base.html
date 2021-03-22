@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+
+<title>
+MySchool
+</title>
+
+
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="{% url 'loginsys' %}">Loginsys</a></li>
+        <li><a href="{% url 'adminka' %}">Adminka</a></li>
+        <li><a href="{% url 'messenger' %}">Messenger</a></li>
+        <li><a href="{% url 'lectures' %}">Lectures</a></li>
+        <li><a href="{% url 'exams' %}">Exams</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'homework' %}">Homework</a></li>
+        <li><a href="http://127.0.0.1:8000/loginsys_app/"> Vue js</a></li>
+    </ul>
+
+</div>
+<div>
+
+    <h2>Кабинеты</h2>
+
+
+<div>
+    <ul>
+        <li><a href="{% url 'cabinet_of_UserProfile' %}">Кабинет учебного заведения</a></li>
+        <li><a href="{% url 'cabinet_of_Group' %}">Кабинет группы</a></li>
+        <li><a href="{% url 'cabinet_of_Teacher' %}">Кабинет преподавателя</a></li>
+        <li><a href="{% url 'cabinet_of_Student' %}">Кабинет студента</a></li>
+    </ul>
+
+</div>
+<div>
+
+
+
+          {% block content %}
+          {% endblock %}
+</div>
+</body>
+</html>
